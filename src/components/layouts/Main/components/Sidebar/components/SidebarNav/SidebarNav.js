@@ -4,13 +4,10 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { useTheme } from "@mui/material/styles";
 import Mylogo from "utils/assets/Mylogo.logo";
-import { useNavigate } from "react-router-dom";
-
 import NavItem from "./components/NavItem";
 
 const SidebarNav = () => {
   const theme = useTheme();
-  const navigate = useNavigate();
   const [call, setCall] = React.useState(false);
 
   return (
@@ -35,14 +32,7 @@ const SidebarNav = () => {
         </Box>
 
         <Box marginTop={2}>
-          <Button
-            size={"large"}
-            variant="outlined"
-            fullWidth
-            component="button"
-            onClick={() => {
-              navigate("./demo");
-            }}>
+          <Button size={"large"} variant="outlined" fullWidth component="button" href="http://Avarile.com:2095">
             Demo
           </Button>
         </Box>

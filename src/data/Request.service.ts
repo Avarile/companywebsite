@@ -3,7 +3,6 @@ import { store } from "data/redux/redux.store";
 import envService from "utils/envService";
 import { setError, setLoadingStatus } from "./redux/universal.reduxSlice";
 import LocalStorageService from "./LocalStorage.service";
-import { Notification } from "components/universalComponents/Notification.component";
 import { rejects } from "assert";
 
 const baseUrl = envService?.baseUrl;
@@ -65,7 +64,6 @@ class Request {
         })
         .catch((error: any) => {
           this.setError(error?.message || error);
-          Notification({ type: "error", message: `error: ${error?.message || error} ` });
         });
     });
   }
@@ -77,14 +75,12 @@ class Request {
       }
       this.axiosInstance.post(url, params, config).then((response: any) => {
         if (notification) {
-          Notification({ type: "success", message: notification });
         }
         resolve(response.data);
       });
     }).catch((error: any) => {
       this.setError(error.message || error);
       if (notification) {
-        Notification({ type: "error", message: `Error: ${error?.message || error}` });
       }
       rejects(error);
     });
@@ -96,15 +92,13 @@ class Request {
         .patch(url, params)
         .then((response: any) => {
           resolve(response);
-          Notification({ type: "success", message: `${notification} was successfully updated!` });
         })
         .catch((error: any) => {
           this.setError(error?.message || error);
-          Notification({ type: "error", message: `${notification} update failed!` });
           reject(error);
         });
     });
   }
 }
 
-export default new Request()
+export default new Request();

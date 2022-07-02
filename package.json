@@ -1,5 +1,5 @@
 {
-  "name": "erpdemo",
+  "name": "Nexus-Australia",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,6 @@
     "@types/node": "^16.11.41",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
-    "antd": "^4.21.3",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
     "card-validator": "^8.1.1",
@@ -23,7 +22,6 @@
     "formik": "^2.2.6",
     "jarallax": "^2.0.3",
     "nanoid": "^4.0.0",
-    "normalize.css": "^8.0.1",
     "query-string": "^7.1.1",
     "react": "^18.2.0",
     "react-countup": "^6.1.0",

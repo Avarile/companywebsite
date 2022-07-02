@@ -14,7 +14,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const { landings: landingPages, secondary: secondaryPages, company: companyPages, account: accountPages, portfolio: portfolioPages, blog: blogPages } = pages;
 
   return (
-    <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} width={1}>
+    <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} width={1} height={"40px"}>
       <Box display={"flex"} component="a" href="/" title="theFront" width={{ xs: 100, md: 120 }}>
         <Box
           component={"img"}

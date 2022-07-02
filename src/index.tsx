@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "data/redux/redux.store";
-import "antd/dist/antd.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Page from "components/Page";
 

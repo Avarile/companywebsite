@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import { Navigate, useLocation, RouteObject } from "react-router-dom";
 import LocalStorageService from "data/LocalStorage.service";
 
-import Home from "components/views/IndexView";
-import Frontend from "components/views/Frontend";
-import Profilio from "components/views/Profilio";
-import Backend from "components/views/Backend";
-
+import Landing from "pages/";
 // const RequireAuth = ({ children }: { children: JSX.Element }) => {
 //   const [user, setUser] = React.useState(LocalStorageService.getCachedData("USER"));
 //   useEffect(() => {
@@ -27,20 +23,20 @@ import Backend from "components/views/Backend";
 export const routes: RouteObject[] = [
   {
     path: "/",
-    element: <Home />,
+    element: <Landing />,
   },
-  {
-    path: "/frontend",
-    element: <Frontend />,
-  },
-  {
-    path: "/backend",
-    element: <Backend />,
-  },
-  {
-    path: "/selfintro",
-    element: <Profilio />,
-  },
+  // {
+  //   path: "/frontend",
+  //   element: <Frontend />,
+  // },
+  // {
+  //   path: "/backend",
+  //   element: <Backend />,
+  // },
+  // {
+  //   path: "/selfintro",
+  //   element: <Profilio />,
+  // },
   // {
   //   path: "/mainentrance",
   //   element: SuspenseWrapper(() => {

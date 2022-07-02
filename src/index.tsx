@@ -7,19 +7,19 @@ import { Provider } from "react-redux";
 import { store } from "data/redux/redux.store";
 import "antd/dist/antd.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import Page from "components/universalComponents/Page.component";
+import Page from "components/Page";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-  <Provider store={store}>
-    <Page>
+  <Page>
+    <Provider store={store}>
       <React.StrictMode>
-        <Router basename="homepage">
+        <Router>
           <App />
         </Router>
       </React.StrictMode>
-    </Page>
-  </Provider>
+    </Provider>
+  </Page>
 );
 
 // If you want to start measuring performance in your app, pass a function

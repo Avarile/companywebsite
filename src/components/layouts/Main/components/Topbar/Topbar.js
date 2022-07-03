@@ -5,42 +5,37 @@ import Button from "@mui/material/Button";
 import { alpha, useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import ThemeModeToggler from "components/ThemeModeToggler";
+import AvarileLogo from "utils/assets/Mylogo.logo";
 
 import { NavItem } from "./components";
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
-  const { mode } = theme.palette;
   const { landings: landingPages, secondary: secondaryPages, company: companyPages, account: accountPages, portfolio: portfolioPages, blog: blogPages } = pages;
 
   return (
     <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} width={1} height={"40px"}>
-      <Box display={"flex"} component="a" href="/" title="theFront" width={{ xs: 100, md: 120 }}>
-        <Box
-          component={"img"}
-          src={mode === "light" && !colorInvert ? "https://assets.maccarianagency.com/the-front/logos/logo.svg" : "https://assets.maccarianagency.com/the-front/logos/logo-negative.svg"}
-          height={1}
-          width={1}
-        />
+      <Box display={"flex"} component="a" href="/" title="澳新融信" width={{ xs: 120, md: 120 }}>
+        <Box component={AvarileLogo} height={1} width={1} />
       </Box>
       <Box sx={{ display: { xs: "none", md: "flex" } }} alignItems={"center"}>
         <Box>
-          <NavItem title={"Landings"} id={"landing-pages"} items={landingPages} colorInvert={colorInvert} />
+          <NavItem title={"新澳留学"} id={"study"} items={landingPages} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
-          <NavItem title={"Company"} id={"company-pages"} items={companyPages} colorInvert={colorInvert} />
+          <NavItem title={"签证申请"} id={"visa"} items={companyPages} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
-          <NavItem title={"Account"} id={"account-pages"} items={accountPages} colorInvert={colorInvert} />
+          <NavItem title={"离岸服务"} id={"offshore"} items={accountPages} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
-          <NavItem title={"Pages"} id={"secondary-pages"} items={secondaryPages} colorInvert={colorInvert} />
+          <NavItem title={"生活指南"} id={"live-in-australia"} items={secondaryPages} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
-          <NavItem title={"Blog"} id={"blog-pages"} items={blogPages} colorInvert={colorInvert} />
+          <NavItem title={"公司架构"} id={""} items={blogPages} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
-          <NavItem title={"Portfolio"} id={"portfolio-pages"} items={portfolioPages} colorInvert={colorInvert} />
+          <NavItem title={"关于我们"} id={"portfolio-pages"} items={portfolioPages} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
           <ThemeModeToggler />

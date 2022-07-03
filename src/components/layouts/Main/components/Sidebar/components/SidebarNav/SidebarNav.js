@@ -1,87 +1,54 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
+import Mylogo from "utils/assets/Mylogo.logo";
 
-import NavItem from './components/NavItem';
+import NavItem from "./components/NavItem";
 
 const SidebarNav = ({ pages }) => {
   const theme = useTheme();
   const { mode } = theme.palette;
+  const { themeToggler } = theme;
 
-  const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
-  } = pages;
+  const { landings: landingPages, secondary: secondaryPages, company: companyPages, account: accountPages, portfolio: portfolioPages, blog: blogPages } = pages;
 
   return (
     <Box>
       <Box width={1} paddingX={2} paddingY={1}>
-        <Box
-          display={'flex'}
-          component="a"
-          href="/"
-          title="theFront"
-          width={{ xs: 100, md: 120 }}
-        >
-          <Box
-            component={'img'}
-            src={
-              mode === 'light'
-                ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-            }
-            height={1}
-            width={1}
-          />
+        <Box display={"flex"} component="a" href="/" title="新澳融信" width={{ xs: 100, md: 120 }}>
+          <Box component={Mylogo} height={1} width={1} />
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>
         <Box>
-          <NavItem title={'Landings'} items={landingPages} />
+          <NavItem title={"新澳留学"} items={landingPages} />
         </Box>
         <Box>
-          <NavItem title={'Company'} items={companyPages} />
+          <NavItem title={"签证申请"} items={companyPages} />
         </Box>
         <Box>
-          <NavItem title={'Pages'} items={secondaryPages} />
+          <NavItem title={"离岸服务"} items={secondaryPages} />
         </Box>
         <Box>
-          <NavItem title={'Account'} items={accountPages} />
+          <NavItem title={"生活指南"} items={accountPages} />
         </Box>
         <Box>
-          <NavItem title={'Blog'} items={blogPages} />
+          <NavItem title={"公司架构"} items={blogPages} />
         </Box>
         <Box>
-          <NavItem title={'Portfolio'} items={portfolioPages} />
+          <NavItem title={"关于我们"} items={portfolioPages} />
         </Box>
         <Box marginTop={2}>
           <Button
-            size={'large'}
+            size={"large"}
             variant="outlined"
             fullWidth
-            component="a"
-            href="/docs/introduction"
-          >
-            Documentation
-          </Button>
-        </Box>
-        <Box marginTop={1}>
-          <Button
-            size={'large'}
-            variant="contained"
-            color="primary"
-            fullWidth
-            component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
-          >
-            Purchase now
+            onClick={() => {
+              themeToggler();
+            }}>
+            {mode === "light" ? "Dark Mode" : "Light Mode"}
           </Button>
         </Box>
       </Box>

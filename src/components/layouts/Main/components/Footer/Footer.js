@@ -1,10 +1,10 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
+import React from "react";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 
 const Footer = () => {
   const theme = useTheme();
@@ -13,21 +13,9 @@ const Footer = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        <Box
-          display={'flex'}
-          justifyContent={'space-between'}
-          alignItems={'center'}
-          width={1}
-          flexDirection={{ xs: 'column', sm: 'row' }}
-        >
-          <Box
-            display={'flex'}
-            component="a"
-            href="/"
-            title="theFront"
-            width={80}
-          >
-            <Box
+        <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} width={1} flexDirection={{ xs: "column", sm: "row" }}>
+          <Box display={"flex"} component="p" width={400}>
+            {/* <Box
               component={'img'}
               src={
                 mode === 'light'
@@ -36,66 +24,35 @@ const Footer = () => {
               }
               height={1}
               width={1}
-            />
+            /> */}
+            <Typography height={1} width={1} color={"text.primary"} sx={{ textDecoration: "none", fontWeight: "700" }}>
+              新澳融信移民 -Nexus- Australia
+            </Typography>
           </Box>
-          <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
+          <Box display="flex" flexWrap={"wrap"} alignItems={"center"}>
             <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="/"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Home
+              <Link underline="none" component="a" href="/contact-Us" color="text.primary" variant={"subtitle2"}>
+                Contact us
               </Link>
             </Box>
             <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="/docs/introduction"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Documentation
+              <Link underline="none" component="a" href="/about" color="text.primary" variant={"subtitle2"}>
+                About
               </Link>
             </Box>
-            <Box marginTop={1}>
-              <Button
-                variant="outlined"
-                color="primary"
-                component="a"
-                target="blank"
-                href="https://mui.com/store/items/the-front-landing-page/"
-                size="small"
-              >
-                Purchase now
-              </Button>
-            </Box>
+          </Box>
+          <Box marginTop={1} marginRight={2} color={"text.primary"} fontSize={"15px"}>
+            Address: 15. Seabird drive. Point Cook. Melbourne
           </Box>
         </Box>
       </Grid>
       <Grid item xs={12}>
-        <Typography
-          align={'center'}
-          variant={'subtitle2'}
-          color="text.secondary"
-          gutterBottom
-        >
-          &copy; theFront. 2021, Maccarian. All rights reserved
+        <Typography align={"center"} variant={"subtitle1"} color="text.secondary" gutterBottom>
+          &copy; 2022 -Nexus- Australia Immigration Ltd. Alrights reserved
         </Typography>
-        <Typography
-          align={'center'}
-          variant={'caption'}
-          color="text.secondary"
-          component={'p'}
-        >
-          When you visit or interact with our sites, services or tools, we or
-          our authorised service providers may use cookies for storing
-          information to help provide you with a better, faster and safer
-          experience and for marketing purposes.
-        </Typography>
+        {/* <Typography align={"center"} variant={"caption"} color="text.secondary" component={"p"}>
+         
+        </Typography> */}
       </Grid>
     </Grid>
   );

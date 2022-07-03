@@ -8,9 +8,6 @@ import Divider from "@mui/material/Divider";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { alpha, useTheme } from "@mui/material/styles";
 
-import a from "utils/assets/3PL.jpg";
-import b from "utils/assets/car-manufacturing.jpg";
-
 import Container from "components/Container";
 
 const Hero = () => {
@@ -28,38 +25,38 @@ const Hero = () => {
         }}
         gutterBottom
         color={"text.secondary"}>
-        Coworking spaces
+        我们是最专业的
       </Typography>
       <Box marginBottom={2}>
         <Typography
-          variant="h2"
+          variant="h4"
           color="text.primary"
           sx={{
-            fontWeight: 700,
+            fontWeight: 500,
           }}>
-          Coworking{" "}
+          移民，留学，法律服务团队{" "}
           <Typography
             color={"primary"}
             component={"span"}
             variant={"inherit"}
             sx={{
-              background: `linear-gradient(180deg, transparent 82%, ${alpha(theme.palette.secondary.main, 0.3)} 0%)`,
+              background: `linear-gradient(180deg, transparent 82%, ${alpha(theme.palette.secondary.main, 0.2)} 0%)`,
             }}>
-            made simple
+            为您提供最优质可靠的服务
           </Typography>
         </Typography>
       </Box>
       <Box marginBottom={3}>
         <Typography variant="h6" component="p" color="text.secondary">
-          For entrepreneurs, startups and freelancers. Discover coworking spaces designed to inspire and to connect you to a community of motivated people.
+          从业6年来，融信公司团队已经帮助无数人圆梦澳洲，我们对移民政策的有着清晰精准的解读和掌握，能够针对您的情况定制可行性最高，风险最低的方案。您的成功就是我们的成功。
         </Typography>
       </Box>
       <Box display="flex" flexDirection={{ xs: "column", sm: "row" }} alignItems={{ xs: "stretched", sm: "flex-start" }}>
         <Button variant="contained" color="primary" size="large" fullWidth={isMd ? false : true}>
-          Book a space
+          预约咨询
         </Button>
-        <Box component={Button} variant="outlined" color="primary" size="large" marginTop={{ xs: 2, sm: 0 }} marginLeft={{ sm: 2 }} fullWidth={isMd ? false : true}>
-          Browse spaces
+        <Box component={Button} variant="outlined" color="text.secondary" size="large" marginTop={{ xs: 2, sm: 0 }} marginLeft={{ sm: 2 }} fullWidth={isMd ? false : true}>
+          政策解读
         </Box>
       </Box>
     </Box>
@@ -108,7 +105,12 @@ const Hero = () => {
           },
         }}>
         <Slider {...sliderOpts}>
-          {[a, b, "https://assets.maccarianagency.com/backgrounds/img24.jpg", "https://assets.maccarianagency.com/backgrounds/img25.jpg"].map((item) => (
+          {[
+            "https://assets.maccarianagency.com/backgrounds/img1.jpg",
+            "https://assets.maccarianagency.com/backgrounds/img3.jpg",
+            "https://assets.maccarianagency.com/backgrounds/img24.jpg",
+            "https://assets.maccarianagency.com/backgrounds/img25.jpg",
+          ].map((item) => (
             <Box key={item} component={LazyLoadImage} effect="blur" src={item} height={{ xs: "auto", md: 1 }} maxHeight={{ xs: 300, md: 1 }} width={1} maxWidth={1} />
           ))}
         </Slider>

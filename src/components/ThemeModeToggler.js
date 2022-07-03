@@ -1,50 +1,30 @@
-import React from 'react';
-import Button from '@mui/material/Button';
-import { alpha, useTheme } from '@mui/material/styles';
+import React from "react";
+import Button from "@mui/material/Button";
+import { alpha, useTheme } from "@mui/material/styles";
 
 const ThemeModeToggler = () => {
   const theme = useTheme();
-  const { themeToggler } = theme;
   const { mode } = theme.palette;
+  const { themeToggler } = theme;
 
   return (
     <Button
-      variant={'outlined'}
+      variant={"outlined"}
       onClick={() => themeToggler()}
       aria-label="Dark mode toggler"
-      color={mode === 'light' ? 'primary' : 'secondary'}
+      color={mode === "light" ? "primary" : "secondary"}
       sx={{
         borderRadius: 2,
-        minWidth: 'auto',
+        minWidth: "auto",
         padding: 0.5,
         borderColor: alpha(theme.palette.divider, 0.2),
-      }}
-    >
-      {mode === 'light' ? (
-        <svg
-          width={20}
-          height={20}
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-          />
+      }}>
+      {mode === "light" ? (
+        <svg width={20} height={20} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       ) : (
-        <svg
-          width={20}
-          height={20}
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg width={20} height={20} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"

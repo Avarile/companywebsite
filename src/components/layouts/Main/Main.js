@@ -8,11 +8,9 @@ import AppBar from "@mui/material/AppBar";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 import Container from "components/Container";
-import TopNav from "components/TopNav";
-
 import { Topbar, Sidebar, Footer } from "./components";
 
-import pages from "../navigation";
+import pages from "routes/navigation";
 
 const Main = ({ children, colorInvert = false, bgcolor = "transparent" }) => {
   const theme = useTheme();

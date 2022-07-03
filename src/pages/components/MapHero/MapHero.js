@@ -1,38 +1,36 @@
-import React, { useState } from 'react';
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+import React, { useState } from "react";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
-import Container from 'components/Container';
+import Container from "components/Container";
 
 const mock = [
   {
-    title: 300,
-    subtitle:
-      '300 + component compositions, which will help you to build any page easily.',
-    suffix: '+',
+    title: 1000,
+    subtitle: "1000 + 客户已经成功取得签证.",
+    suffix: "+",
   },
   {
-    title: 45,
-    subtitle:
-      '45 + landing and supported pages to Build a professional website.',
-    suffix: '+',
+    title: 6,
+    subtitle: "6年专业留学移民经验.",
+    suffix: "+",
   },
   {
     title: 99,
-    subtitle: '99% of our customers rated 5-star our themes over 5 years.',
-    suffix: '%',
+    subtitle: "我们达到了99%以上的客户满意率.",
+    suffix: "%",
   },
 ];
 
 const MapHero = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
@@ -47,25 +45,13 @@ const MapHero = () => {
     };
 
     return (
-      <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
-        <Typography
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
-          }}
-          gutterBottom
-          color={'secondary'}
-        >
-          Scale
-        </Typography>
+      <Box data-aos={isMd ? "fade-right" : "fade-up"}>
         <Box marginBottom={2}>
-          <Typography variant={'h4'} sx={{ fontWeight: 700 }} gutterBottom>
-            Flexible office space means growing your team is easy.
+          <Typography variant={"h6"} sx={{ fontWeight: 700 }} gutterBottom>
+            作为专业的移民团队，我们一直吧客户的满意放在第一位.
           </Typography>
           <Typography color="text.secondary">
-            Rather than worrying about switching offices every couple years, you
-            can instead stay in the same location and grow-up from your shared
-            coworking space to an office that takes up an entire floor.
+            从业6年以来，我们一直结合实际情况为每一个客户提供.
           </Typography>
         </Box>
         <Grid container spacing={2}>
@@ -73,16 +59,8 @@ const MapHero = () => {
             <Grid key={i} item xs={12} md={4}>
               <Typography variant="h3" gutterBottom>
                 <Box fontWeight={600}>
-                  <VisibilitySensor
-                    onChange={(isVisible) => setViewPortVisibility(isVisible)}
-                    delayedCall
-                  >
-                    <CountUp
-                      duration={2}
-                      end={viewPortEntered ? item.title : 0}
-                      start={0}
-                      suffix={item.suffix}
-                    />
+                  <VisibilitySensor onChange={(isVisible) => setViewPortVisibility(isVisible)} delayedCall>
+                    <CountUp duration={2} end={viewPortEntered ? item.title : 0} start={0} suffix={item.suffix} />
                   </VisibilitySensor>
                 </Box>
               </Typography>
@@ -106,13 +84,10 @@ const MapHero = () => {
         marginHeight={0}
         marginWidth={0}
         scrolling="no"
-        src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=Milan&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+        src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=15seabird,pointcook,Melbourne&ie=UTF8&t=&z=14&iwloc=B&output=embed"
         style={{
           minHeight: 300,
-          filter:
-            theme.palette.mode === 'dark'
-              ? 'grayscale(0.5) opacity(0.7)'
-              : 'none',
+          filter: theme.palette.mode === "dark" ? "grayscale(0.5) opacity(0.7)" : "none",
         }}
       />
     );
@@ -123,15 +98,10 @@ const MapHero = () => {
       sx={{
         width: 1,
         height: 1,
-        overflow: 'hidden',
-      }}
-    >
+        overflow: "hidden",
+      }}>
       <Container paddingX={0} paddingY={0} maxWidth={{ sm: 1, md: 1236 }}>
-        <Box
-          display={'flex'}
-          flexDirection={{ xs: 'column', md: 'row' }}
-          position={'relative'}
-        >
+        <Box display={"flex"} flexDirection={{ xs: "column", md: "row" }} position={"relative"}>
           <Box width={1} order={{ xs: 2, md: 1 }}>
             <Container>
               <LeftSide />
@@ -139,35 +109,31 @@ const MapHero = () => {
           </Box>
           <Box
             sx={{
-              flex: { xs: '0 0 100%', md: '0 0 50%' },
-              position: 'relative',
-              maxWidth: { xs: '100%', md: '50%' },
+              flex: { xs: "0 0 100%", md: "0 0 50%" },
+              position: "relative",
+              maxWidth: { xs: "100%", md: "50%" },
               order: { xs: 1, md: 2 },
-            }}
-          >
+            }}>
             <Box
               sx={{
-                width: { xs: 1, md: '50vw' },
-                height: '100%',
-                position: 'relative',
-              }}
-            >
+                width: { xs: 1, md: "50vw" },
+                height: "100%",
+                position: "relative",
+              }}>
               <Box
                 sx={{
-                  width: '100%',
-                  height: '100%',
-                  overflow: 'hidden',
-                }}
-              >
+                  width: "100%",
+                  height: "100%",
+                  overflow: "hidden",
+                }}>
                 <Box
                   sx={{
-                    overflow: 'hidden',
-                    left: '0%',
+                    overflow: "hidden",
+                    left: "0%",
                     width: 1,
                     height: 1,
-                    position: { xs: 'relative', md: 'absolute' },
-                  }}
-                >
+                    position: { xs: "relative", md: "absolute" },
+                  }}>
                   <RightSide />
                 </Box>
               </Box>

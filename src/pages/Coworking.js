@@ -9,7 +9,7 @@ import { useTheme } from "@mui/material/styles";
 
 import Main from "components/layouts/Main";
 import Container from "components/Container";
-import { Advantages, Application, Community, Events, Hero, Locations, MapHero, Reviews, Spaces, Contact } from "./components";
+import { Advantages, Application, Community, Events, Hero, Locations, MapHero, Reviews, Spaces, Contact, DemoGrids } from "./components";
 
 const Coworking = () => {
   const theme = useTheme();
@@ -28,7 +28,7 @@ const Coworking = () => {
       <Hero />
       <Box bgcolor={theme.palette.alternate?.main}>
         <Container>
-          <Advantages />
+          <DemoGrids />
         </Container>
       </Box>
       <Container>
@@ -44,11 +44,11 @@ const Coworking = () => {
       <Container>
         <Reviews />
       </Container>
-      <Box bgcolor={theme.palette.alternate?.main}>
+      {/* <Box bgcolor={theme.palette.alternate?.main}>
         <Container>
           <Application />
         </Container>
-      </Box>
+      </Box> */}
       <Container>
         <Events />
       </Container>

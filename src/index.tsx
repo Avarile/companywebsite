@@ -7,6 +7,11 @@ import { store } from "data/redux/redux.store";
 import { BrowserRouter as Router } from "react-router-dom";
 import Page from "components/Page";
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'react-image-lightbox/style.css';
+import 'aos/dist/aos.css';
+
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <Page>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Navigate, useLocation, RouteObject } from "react-router-dom";
 import LocalStorageService from "data/LocalStorage.service";
 
-import Landing from "pages/";
+import Landing from "pages/Immigration";
 // const RequireAuth = ({ children }: { children: JSX.Element }) => {
 //   const [user, setUser] = React.useState(LocalStorageService.getCachedData("USER"));
 //   useEffect(() => {

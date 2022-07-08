@@ -10,3 +10,5 @@ export { default as Spaces } from "./Spaces";
 export { default as Contact } from "./Contact";
 export { default as DemoGrids } from "./DemoGrids";
 export { default as FullScreenHero } from "./FullScreenHeroWithImageSlider";
+export { default as HeroFullPic } from "./HeroFullPic";
+export { default as BlogContent} from './BlogContent'

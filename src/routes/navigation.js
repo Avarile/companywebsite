@@ -13,7 +13,7 @@ const pages = {
       href: "/study-in-australia/university/publication",
     },
     {
-      title: "读书签证办理",
+      title: "勤工简学签证",
       href: "/study-in-australia/university/visa-service",
     },
     {

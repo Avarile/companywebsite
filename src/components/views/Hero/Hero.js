@@ -10,6 +10,8 @@ import { alpha, useTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import work_study_visa from "utils/assets/Hero/Work-study-visa.png";
 import Live_in_aus from "utils/assets/Hero/Live-in-Aus.png";
+import Work_and_salary from "utils/assets/Hero/Work-and-salary.png";
+import coders from "utils/assets/Hero/coders.png";
 
 import Container from "components/Container";
 
@@ -119,12 +121,12 @@ const Hero = () => {
               route: "/live-in-aus",
             },
             {
-              pic: "https://assets.maccarianagency.com/backgrounds/img25.jpg",
-              route: "/study-in-australia/public-school-tour",
+              pic: Work_and_salary,
+              route: "/work-and-salary",
             },
             {
-              pic: "https://assets.maccarianagency.com/backgrounds/img26.jpg",
-              route: "/onshore-service",
+              pic: coders,
+              route: "/programmer-aus",
             },
           ].map((item) => (
             <Box

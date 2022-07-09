@@ -11,4 +11,6 @@ export { default as Contact } from "./Contact";
 export { default as DemoGrids } from "./DemoGrids";
 export { default as FullScreenHero } from "./FullScreenHeroWithImageSlider";
 export { default as HeroFullPic } from "./HeroFullPic";
-export { default as BlogContent} from './BlogContent'
+export { default as BlogContent } from "./BlogContent";
+export { default as BlogContentUni } from "./BlogContent_university";
+export { default as BlogContentStudyVisa } from "./BlogContent_studyvisa";

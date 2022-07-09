@@ -11,7 +11,7 @@ import { NavItem } from "./components";
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
-  const { landings: landingPages, secondary: secondaryPages, company: companyPages, account: accountPages, portfolio: portfolioPages, blog: blogPages } = pages;
+  const { migration: migration, visa: visa, programmer: programmer, account: accountPages, portfolio: portfolioPages, blog: blogPages } = pages;
 
   return (
     <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} width={1} height={"40px"}>
@@ -20,16 +20,16 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       </Box>
       <Box sx={{ display: { xs: "none", md: "flex" } }} alignItems={"center"}>
         <Box>
-          <NavItem title={"新澳留学"} id={"study"} items={landingPages} colorInvert={colorInvert} />
+          <NavItem title={"新澳留学"} id={"study"} items={migration} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
-          <NavItem title={"签证申请"} id={"visa"} items={companyPages} colorInvert={colorInvert} />
+          <NavItem title={"签证申请"} id={"visa"} items={visa} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
-          <NavItem title={"离岸服务"} id={"offshore"} items={accountPages} colorInvert={colorInvert} />
+          <NavItem title={"融信代码"} id={"offshore"} items={programmer} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
-          <NavItem title={"生活指南"} id={"live-in-australia"} items={secondaryPages} colorInvert={colorInvert} />
+          <NavItem title={"生活指南"} id={"live-in-australia"} items={accountPages} colorInvert={colorInvert} />
         </Box>
         <Box marginLeft={4}>
           <NavItem title={"公司架构"} id={""} items={blogPages} colorInvert={colorInvert} />

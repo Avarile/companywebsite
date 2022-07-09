@@ -20,6 +20,7 @@ export const light = {
   text: {
     primary: "#1e2022",
     secondary: "#677788",
+    colorful: "#E83015",
   },
   divider: "rgba(0, 0, 0, 0.12)",
   background: {
@@ -56,6 +57,7 @@ export const dark = {
   text: {
     primary: "#EEEEEF",
     secondary: "#AEB0B4",
+    colorful: "#D19826",
   },
   divider: "rgba(255, 255, 255, 0.12)",
   background: {

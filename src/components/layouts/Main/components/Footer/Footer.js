@@ -25,24 +25,18 @@ const Footer = () => {
               height={1}
               width={1}
             /> */}
-            <Typography height={1} width={1} color={"text.primary"} sx={{ textDecoration: "none", fontWeight: "700" }}>
-              新澳融信移民 -Nexus- Australia
-            </Typography>
+            <Typography height={1} width={1} color={"text.primary"} sx={{ textDecoration: "none", fontWeight: "700" }}></Typography>
           </Box>
           <Box display="flex" flexWrap={"wrap"} alignItems={"center"}>
-            <Box marginTop={1} marginRight={2}>
+            <Box marginTop={1}>
               <Link underline="none" component="a" href="/contact-Us" color="text.primary" variant={"subtitle2"}>
-                Contact us
+                新澳融信信息平台 -Nexus- Australia
               </Link>
+
+              <Box marginTop={1} color={"text.primary"} fontSize={"15px"}>
+                Address: 15. Seabird drive. Point Cook. Melbourne
+              </Box>
             </Box>
-            <Box marginTop={1} marginRight={2}>
-              <Link underline="none" component="a" href="/about" color="text.primary" variant={"subtitle2"}>
-                About
-              </Link>
-            </Box>
-          </Box>
-          <Box marginTop={1} marginRight={2} color={"text.primary"} fontSize={"15px"}>
-            Address: 15. Seabird drive. Point Cook. Melbourne
           </Box>
         </Box>
       </Grid>

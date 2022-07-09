@@ -3,7 +3,7 @@ import { Navigate, useLocation, RouteObject } from "react-router-dom";
 import LocalStorageService from "data/LocalStorage.service";
 
 import Landing from "pages/Immigration";
-import { WorkStudyVisa } from "pages/LearningPages";
+import { WorkStudyVisa, AusUniversity, StudyVisa } from "pages/StudyPages";
 // const RequireAuth = ({ children }: { children: JSX.Element }) => {
 //   const [user, setUser] = React.useState(LocalStorageService.getCachedData("USER"));
 //   useEffect(() => {
@@ -30,14 +30,14 @@ export const routes: RouteObject[] = [
     path: "/study-in-australia/university/visa-service",
     element: <WorkStudyVisa />,
   },
-  // {
-  //   path: "/backend",
-  //   element: <Backend />,
-  // },
-  // {
-  //   path: "/selfintro",
-  //   element: <Profilio />,
-  // },
+  {
+    path: "/study-in-australia/university",
+    element: <AusUniversity />,
+  },
+  {
+    path: "/study-in-australia/university/publication",
+    element: <StudyVisa />,
+  },
   // {
   //   path: "/mainentrance",
   //   element: SuspenseWrapper(() => {

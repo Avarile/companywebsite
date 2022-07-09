@@ -8,15 +8,22 @@ import Divider from "@mui/material/Divider";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { alpha, useTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import work_study_visa from "utils/assets/Hero/Work-study-visa.png";
+import work_study_visa from "utils/assets/Hero/workstudy-visa-withweixin.png";
 import Live_in_aus from "utils/assets/Hero/Live-in-Aus.png";
 import Work_and_salary from "utils/assets/Hero/Work-and-salary.png";
 import coders from "utils/assets/Hero/coders.png";
+import { useDispatch, useSelector } from "react-redux";
+import { OpenContactTab } from "data/redux/universal.reduxSlice";
 
 import Container from "components/Container";
 
 const Hero = () => {
   const navigate = useNavigate();
+  const contactTab = useSelector((state) => {
+    return state.universal.contactTab;
+  });
+  const dispatch = useDispatch();
+
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
@@ -58,7 +65,14 @@ const Hero = () => {
         </Typography>
       </Box>
       <Box display="flex" flexDirection={{ xs: "column", sm: "row" }} alignItems={{ xs: "stretched", sm: "flex-start" }}>
-        <Button variant="contained" color="primary" size="large" fullWidth={isMd ? false : true}>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          fullWidth={isMd ? false : true}
+          onClick={() => {
+            dispatch(OpenContactTab());
+          }}>
           预约咨询
         </Button>
         <Box component={Button} variant="outlined" color="text.secondary" size="large" marginTop={{ xs: 2, sm: 0 }} marginLeft={{ sm: 2 }} fullWidth={isMd ? false : true}>

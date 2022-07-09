@@ -9,6 +9,10 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Card from "@mui/material/Card";
 
+import lecture from "utils/assets/indoors/lecture.jpg";
+import graduation from "utils/assets/indoors/graduation.jpg";
+import studyInLib from "utils/assets/indoors/studyInLib.jpg";
+
 const BlogContent = () => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up("md"), {
@@ -17,12 +21,12 @@ const BlogContent = () => {
 
   const photos = [
     {
-      src: "https://assets.maccarianagency.com/backgrounds/img25.jpg",
+      src: lecture,
       rows: 1,
       cols: 1,
     },
     {
-      src: "https://assets.maccarianagency.com/backgrounds/img22.jpg",
+      src: graduation,
       rows: 1,
       cols: 1,
     },
@@ -31,10 +35,10 @@ const BlogContent = () => {
   return (
     <Box>
       <Box paddingX={{ xs: 0, sm: 4, md: 6 }}>
-        <Typography variant={"h4"} align={"center"} sx={{ fontWeight: 600, color: theme.palette.common.black, marginTop: 10, marginBottom: 5 }}>
+        <Typography variant={"h4"} align={"center"} color={"text.primary"} sx={{ fontWeight: 600, marginTop: 10, marginBottom: 5 }}>
           打工留学签证
         </Typography>
-        <Typography variant={"h6"} sx={{ fontWeight: 500, color: theme.palette.common.black, marginTop: 10, marginBottom: 5, lineHeight: 2 }}>
+        <Typography variant={"h6"} color={"text.primary"} sx={{ fontWeight: 500, marginTop: 10, marginBottom: 5, lineHeight: 2 }}>
           目前的澳洲二年工签，已经向所有商课和职校开放。无需职业评估，毕业自动获得！此举是为解决疫情期澳洲境内人才短缺问题，澳洲移民局发布了一系列利好政策之一。2022年6月23日相关政策正式立法，7月1日开始执行。
           <br />
           <strong>2023年7月1日之后，根据澳洲人才短缺情况，移民部长还有权延长该福利政策。</strong>
@@ -43,7 +47,7 @@ const BlogContent = () => {
           <LazyLoadImage
             height={"100%"}
             width={"100%"}
-            src={"https://assets.maccarianagency.com/backgrounds/img4.jpg"}
+            src={studyInLib}
             alt="Remote working"
             effect="blur"
             style={{
@@ -132,7 +136,7 @@ const BlogContent = () => {
             </Typography>
 
             <Typography sx={{ lineHeight: 2, marginTop: 2 }}>
-              - 1. 程序员
+              - 2. 程序员
               <br />
               - Certificate III+Certificate IV+Diploma of CyberSecurity / Internet。
               <br />- 获得该资格证书后，可为软件 / 互联网公司 / IT企业工作。

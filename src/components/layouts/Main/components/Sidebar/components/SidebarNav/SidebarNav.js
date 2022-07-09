@@ -12,7 +12,7 @@ const SidebarNav = ({ pages }) => {
   const { mode } = theme.palette;
   const { themeToggler } = theme;
 
-  const { landings: landingPages, secondary: secondaryPages, company: companyPages, account: accountPages, portfolio: portfolioPages, blog: blogPages } = pages;
+  const { migration: migration, visa: visa, programmer: programmer, account: accountPages, portfolio: portfolioPages, blog: blogPages } = pages;
 
   return (
     <Box>
@@ -23,13 +23,13 @@ const SidebarNav = ({ pages }) => {
       </Box>
       <Box paddingX={2} paddingY={2}>
         <Box>
-          <NavItem title={"新澳留学"} items={landingPages} />
+          <NavItem title={"新澳留学"} items={migration} />
         </Box>
         <Box>
-          <NavItem title={"签证申请"} items={companyPages} />
+          <NavItem title={"签证申请"} items={visa} />
         </Box>
         <Box>
-          <NavItem title={"离岸服务"} items={secondaryPages} />
+          <NavItem title={"融信代码"} items={programmer} />
         </Box>
         <Box>
           <NavItem title={"生活指南"} items={accountPages} />

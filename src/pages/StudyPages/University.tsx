@@ -7,55 +7,44 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import { useTheme } from "@mui/material/styles";
 
-import { useSelector, useDispatch } from "react-redux";
-import { OpenContactTab, CloseContactTab } from "data/redux/universal.reduxSlice";
-
 import Main from "components/layouts/Main";
 import Container from "components/Container";
-import { Community, Events, Hero, Locations, MapHero, Reviews, Spaces, Contact, DemoGrids } from "components/views";
+import { BlogContentUni, HeroFullPic, Contact } from "components/views";
 
-const Immigration = () => {
+import heroBcg from "utils/assets/Hero/UniMel.jpg";
+
+const HeroData = {
+  backgroundImg: heroBcg,
+  mainTitle: "澳大利亚主要大学简介",
+  subTitle: "",
+};
+
+const AusUniversity = () => {
   const theme = useTheme();
-  const contactTab = useSelector((state) => {
-    return state.universal.contactTab;
-  });
-  const dispatch = useDispatch();
+  const [openBottombar, setOpenBottombar] = useState(false);
+
+  const handleBottombarOpen = () => {
+    setOpenBottombar(true);
+  };
+
+  const handleBottombarClose = () => {
+    setOpenBottombar(false);
+  };
 
   return (
-    <Main>
-      <Hero />
-      <Box bgcolor={theme.palette.alternate?.main}>
-        {/* <FullScreenHero /> */}
-        <Container>
-          <DemoGrids />
-        </Container>
-      </Box>
+    <Main colorInvert={true}>
+      <HeroFullPic {...HeroData} />
+      {/* @ts-ignore */}
+      <Box bgcolor={theme.palette?.alternate?.main}></Box>
       <Container>
-        <Spaces />
+        <BlogContentUni />
       </Container>
       <Divider />
-      <Container>
-        <Locations />
-      </Container>
-      <Box bgcolor={theme.palette.alternate?.main}>
-        <MapHero />
-      </Box>
-      <Container>
-        <Reviews />
-      </Container>
-      {/* <Box bgcolor={theme.palette.alternate?.main}>
-        <Container>
-          <Application />
-        </Container>
-      </Box> */}
-      <Container>
-        <Events />
-      </Container>
-      <Box bgcolor={theme.palette.alternate?.main}>
-        <Container>
-          <Community />
-        </Container>
-      </Box>
+
+      {/* @ts-ignore */}
+      <Box bgcolor={theme.palette?.alternate?.main}></Box>
+
+      {/* @ts-ignore */}
       <AppBar
         position="fixed"
         sx={{
@@ -85,9 +74,7 @@ const Immigration = () => {
                 background: theme.palette.primary.dark,
               },
             }}
-            onClick={() => {
-              dispatch(OpenContactTab());
-            }}>
+            onClick={handleBottombarOpen}>
             <Box component={"svg"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width={24} height={24} color={theme.palette.common.white}>
               <path
                 strokeLinecap="round"
@@ -97,12 +84,7 @@ const Immigration = () => {
               />
             </Box>
           </IconButton>
-          <Drawer
-            anchor="bottom"
-            open={contactTab}
-            onClose={() => {
-              dispatch(CloseContactTab());
-            }}>
+          <Drawer anchor="bottom" open={openBottombar} onClose={handleBottombarClose}>
             <Container display={"flex"} flexDirection={"column"} alignItems={"center"}>
               <IconButton
                 sx={{
@@ -111,9 +93,7 @@ const Immigration = () => {
                   boxShadow: 4,
                   marginBottom: theme.spacing(4),
                 }}
-                onClick={() => {
-                  dispatch(CloseContactTab());
-                }}>
+                onClick={handleBottombarClose}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width={24} height={24}>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -127,4 +107,4 @@ const Immigration = () => {
   );
 };
 
-export default Immigration;
+export default AusUniversity;

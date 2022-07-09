@@ -24,7 +24,7 @@ const mock = [
       name: "Study in Australia",
       avatar: "",
     },
-    link: "/study-in-australia/university/visa-service",
+    link: "/study-in-australia/university/publication",
   },
   {
     image: passportService,
@@ -57,7 +57,7 @@ const mock = [
       name: "最新学习打工移民通道",
       avatar: "",
     },
-    link: "/service/study-work-service",
+    link: "/study-in-australia/university/visa-service",
   },
 ];
 

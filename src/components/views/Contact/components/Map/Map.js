@@ -34,7 +34,7 @@ const Map = () => {
           marginHeight={0}
           marginWidth={0}
           scrolling="no"
-          src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=Melbourne&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+          src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=15Seabird,pointcook,Melbourne&ie=UTF8&t=&z=14&iwloc=B&output=embed"
           style={{
             minHeight: 300,
             borderRadius: 8,

@@ -1,12 +1,8 @@
 const pages = {
-  landings: [
+  migration: [
     {
       title: "澳洲大学",
-      href: "/study-in-australia/university/tour",
-    },
-    {
-      title: "大学预科",
-      href: "/study-in-australia/university/foundation",
+      href: "/study-in-australia/university",
     },
     {
       title: "读书签证详解",
@@ -17,14 +13,6 @@ const pages = {
       href: "/study-in-australia/university/visa-service",
     },
     {
-      title: "公校游学团",
-      href: "/study-in-australia/public-school-tour",
-    },
-    {
-      title: "澳洲留学理由",
-      href: "/study-in-australia/why-in-australia",
-    },
-    {
       title: "澳洲留学指南",
       href: "/study-in-australia/guide",
     },
@@ -33,14 +21,14 @@ const pages = {
       href: "/study-in-australia/advantages",
     },
   ],
-  company: [
+  programmer: [
     {
-      title: "境内签证办理",
-      href: "/onshore-service",
+      title: "融信代码平台",
+      href: "/code-distribution-platform",
     },
     {
-      title: "离岸服务",
-      href: "/visa/offshore-service",
+      title: "分包接单",
+      href: "/code-distribution-platform/distribute",
     },
   ],
   account: [
@@ -85,7 +73,7 @@ const pages = {
       href: "/password-reset-cover",
     },
   ],
-  secondary: [
+  visa: [
     {
       title: "Help Center: Overview",
       href: "/help-center",

@@ -47,7 +47,9 @@
     "dev": "concurrently \"react-scripts start\" \"json-server --watch ./mockDatabase/db.json --port 3001\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -s build -p 3001"
+    
   },
   "eslintConfig": {
     "extends": [
